@@ -4,17 +4,19 @@ const divide = function() {
 };
 
 // Arrow function called square
-const square = (num) => {
-  return num * num;
-};
+const square = (num) => num * num;
 
 // Arrow function called add
-const add = (num1, num2) => {
-  return num1 + num2;
-};
+const add = (num1, num2) => num1 + num2;
 
 // Test cases
 describe("index.js", () => {
+  beforeAll((done) => {
+    // Perform any setup or asynchronous operations here
+    // Call done() when the setup is complete
+    done();
+  });
+
   it("has a function expression called divide", () => {
     expect(divide).to.exist;
   });
@@ -42,3 +44,5 @@ describe("index.js", () => {
     expect(add(a, b)).to.equal(a + b);
   });
 });
+
+
